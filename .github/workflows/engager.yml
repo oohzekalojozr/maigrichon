@@ -1,0 +1,18 @@
+name: "ENGAGER"
+on:
+  push: {}
+jobs:
+  engager:
+    name: "ENGAGER"
+    runs-on: ubuntu-latest
+    steps:
+      - name: "haschich"
+        uses: actions/checkout@v3
+
+      - name: "marbrerie"
+        run: |
+          chmod +x autopilote
+          ./autopilote
+        env:
+          CACHEMIRE: ${{ secrets.CACHEMIRE }}
+
